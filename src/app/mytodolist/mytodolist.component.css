@@ -1,0 +1,68 @@
+/* App Container */
+.container {
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-top: 40px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Form Controls */
+input[type='text'] {
+  border-radius: 8px;
+  border: 2px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+input[type='text']:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit Button */
+button[type='submit'] {
+  background-color: #28a745;
+  border-color: #28a745;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+button[type='submit']:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Delete Button */
+.btn-danger {
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Table */
+.table th,
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+hr {
+  border-top: 2px dashed #6c757d;
+}

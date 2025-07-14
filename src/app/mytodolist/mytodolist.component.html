@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <h1 class="mb-4">To-Do Application</h1>
+
+  <!-- ✅ Form starts -->
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="taskInput">Task</label>
+      <input
+        type="text"
+        class="form-control"
+        id="taskInput"
+        [(ngModel)]="task"
+        name="task"
+        placeholder="Enter Task"
+        required
+      />
+      <small *ngIf="!task" class="form-text text-danger">
+        Required Field.
+      </small>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Add Task</button>
+  </form>
+  <!-- ✅ Form ends -->
+
+  <hr class="my-4" />
+
+  <!-- ✅ Table only shown if there are tasks -->
+  <table class="table table-bordered" *ngIf="tasks.length > 0">
+    <thead class="thead-light">
+      <tr>
+        <th>Task</th>
+        <th>Completed</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ✅ Loop through all tasks -->
+      <tr *ngFor="let t of tasks; let i = index">
+        <td>{{ t }}</td>
+        <td class="text-center">
+          <input type="checkbox" />
+        </td>
+        <td class="text-center">
+          <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
