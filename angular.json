@@ -21,10 +21,14 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "node_modules/bootstrap/dist.scss/bootstrap.min.scss",
-              "src/styles.scss"
-            ],
+            
+           
+"styles": [
+  "node_modules/bootstrap/scss/bootstrap.scss",
+  "src/styles.scss"
+] ,
+            
+            
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
