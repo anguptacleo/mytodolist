@@ -7,7 +7,7 @@ import { MytodolistComponent } from './mytodolist/mytodolist.component';  // ✅
   standalone: true,                           // ✅ THIS LINE IS REQUIRED
   imports: [RouterOutlet, MytodolistComponent],  // ✅ Add custom component to imports
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   protected title = 'mylist';

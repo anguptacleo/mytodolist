@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common'; // ✅ Import CommonModule
   standalone: true,
   imports: [FormsModule, CommonModule], // ✅ Add CommonModule here
   templateUrl: './mytodolist.component.html',
-  styleUrls: ['./mytodolist.component.css'],
+  styleUrls: ['./mytodolist.component.scss'],
 })
 export class MytodolistComponent {
   task: string = '';
