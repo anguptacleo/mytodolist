@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; // ✅ Import CommonModule
+import { CommonModule } from '@angular/common'; 
+import { Todotask } from '../task.model';
+// ✅ Import CommonModule
 
 @Component({
   selector: 'app-mytodolist',
@@ -10,17 +12,27 @@ import { CommonModule } from '@angular/common'; // ✅ Import CommonModule
   styleUrls: ['./mytodolist.component.scss'],
 })
 export class MytodolistComponent {
-  task: string = '';
-  tasks: string[] = [];
+ // mytodolist.component.ts
 
-  onSubmit() {
-    if (this.task.trim()) {
-      this.tasks.push(this.task.trim());
-      this.task = '';
-    }
-  }
+task: string = '';
+tasks: { title: string; isFavourite: boolean }[] = [];
 
-  deleteTask(index: number) {
-    this.tasks.splice(index, 1);
+onSubmit() {
+  if (this.task.trim()) {
+    this.tasks.push({
+      title: this.task.trim(),
+      isFavourite: false
+    });
+    this.task = '';
   }
+}
+
+toggleFavourite(task: any) {
+  task.isFavourite = !task.isFavourite;
+}
+
+deleteTask(index: number) {
+  this.tasks.splice(index, 1);
+}
+
 }

@@ -1,0 +1,22 @@
+<h2>All Tasks</h2>
+
+<input #taskTitle type="text" placeholder="New Task" />
+<button (click)="addTask(taskTitle.value); taskTitle.value=''">Add</button>
+
+<div *ngIf="tasks.length === 0">
+  <p>No tasks available. Start by adding one!</p>
+</div>
+
+<ul *ngIf="tasks.length > 0">
+  <li *ngFor="let task of tasks">
+    {{ task.title }}
+
+    <!-- ⭐ Favourite Icon -->
+    <button (click)="toggleFavourite(task.id)">
+      {{ task.isFavourite ? '⭐' : '☆' }}
+    </button>
+
+    <!-- ✏️ Edit Button -->
+    <button (click)="goToEdit(task.id)">Edit</button>
+  </li>
+</ul>
