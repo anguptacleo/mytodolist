@@ -1,9 +1,11 @@
-<h1>📝 My Todo Application</h1>
+<div class="app-container">
+  <h1> My Todo Application</h1>
 
-<nav>
-  <a routerLink="/list"> Task List</a> |
-  <a routerLink="/favourites"> Favourites</a>
-  
-</nav>
+  <nav>
+    <a routerLink="/list" routerLinkActive="active-link">Task List</a>
+    <span>|</span>
+    <a routerLink="/favourites" routerLinkActive="active-link">Favourites</a>
+  </nav>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

@@ -5,14 +5,8 @@ import { RouterModule } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule],
-  template: ` <h1>My To-Do Application</h1>
-    <nav>
-      <a routerLink="/">Tasks</a> |
-      <a routerLink="/favourites">Favourites</a>
-     
-    </nav>
-    <router-outlet></router-outlet>
-  `
+ templateUrl: './app.component.html',
+ styleUrls: ['./app.component.scss']
     
 })
 export class AppComponent {

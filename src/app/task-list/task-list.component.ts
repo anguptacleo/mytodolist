@@ -9,19 +9,29 @@ import { Todotask } from '../task.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent {
   tasks: Todotask[] = [];
 
   constructor(private taskService: TaskService, private router: Router) {}
 
+  
   ngOnInit() {
-    this.tasks = this.taskService.getTasks();
-  }
+  this.taskService.tasks$.subscribe(tasks => {
+    this.tasks = tasks;
+  });
+}
+
   addTask(title: string) {
     this.taskService.addTask(title);
     this.tasks = this.taskService.getTasks(); // update task list
   }
+  deleteTask(id: number): void {
+  this.taskService.deleteTask(id);
+}
+
+
 
 
   toggleFavourite(id: number) {

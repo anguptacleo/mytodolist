@@ -54,9 +54,10 @@ export class TaskService {
   }
 
   deleteTask(id: number): void {
-    this.tasks = this.tasks.filter(task => task.id !== id);
-    this.tasksSubject.next(this.tasks);  // Notify deletion
-  }
+  const updated = this.tasksSubject.value.filter(t => t.id !== id);
+  this.tasksSubject.next(updated);
+}
+
 
   getFavouriteTasks(): Todotask[] {
     return this.tasks.filter(task => task.isFavourite);

@@ -15,6 +15,7 @@ import { Todotask } from '../task.model'; // ✅ correct
     RouterModule // ✅ include FormsModule here
   ],
   templateUrl: './edit-list.component.html',
+  styleUrls: ['./edit-list.component.scss']
 })
 export class EditListComponent implements OnInit {
   taskId!: number;
