@@ -29,6 +29,7 @@
     <thead class="thead-light">
       <tr>
         <th>Task</th>
+        <th>Favourite</th>
         <th>Completed</th>
         <th>Delete</th>
       </tr>
@@ -36,10 +37,25 @@
     <tbody>
       <!-- ✅ Loop through all tasks -->
       <tr *ngFor="let t of tasks; let i = index">
-        <td>{{ t }}</td>
+        <td>{{ t.title }}</td>
+
+        <!-- ⭐ Favourite Column -->
+        <td class="text-center">
+          <span
+            (click)="toggleFavourite(t)"
+            style="cursor: pointer; font-size: 1.5rem; color: gold"
+            [title]="t.isFavourite ? 'Remove from favourites' : 'Add to favourites'"
+          >
+            {{ t.isFavourite ? '⭐' : '☆' }}
+          </span>
+        </td>
+
+        <!-- ✅ Completed Checkbox -->
         <td class="text-center">
           <input type="checkbox" />
         </td>
+
+        <!-- ❌ Delete Button -->
         <td class="text-center">
           <button class="btn btn-danger btn-sm" (click)="deleteTask(i)">
             Delete
