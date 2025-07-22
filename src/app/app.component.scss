@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eef2f7;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-container {
+  background-color:rgb(0, 195, 255);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 320px;
+  max-width: 1300px;
+  width: 100%;
+  border-width: 10px;
+  border-style: groove;
+border-style: double;
+border-color: black;
+  
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: black;
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav {
+  margin-bottom: 2rem;
+
+  a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    font-size: 30px;
+
+    &:hover {
+      color: #0d47a1;
+    }
+
+    &.active-link {
+      text-decoration: underline;
+    }
+  }
+}

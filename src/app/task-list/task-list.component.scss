@@ -1,0 +1,106 @@
+.task-list-wrapper {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+
+  h2 {
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 600px;
+    
+  }
+
+  .add-task {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+
+    input {
+      flex: 1;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #125aa3;
+      }
+    }
+  }
+
+  .empty-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &.completed {
+        span {
+          text-decoration: line-through;
+          color: #aaa;
+        }
+      }
+
+      .task-left {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .task-actions {
+        display: flex;
+        gap: 0.5rem;
+
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 1.1rem;
+          color: #1976d2;
+          transition: transform 0.2s ease;
+          padding: 0.25rem; 
+          border-radius: 50%;
+          margin-left: 20px;
+        }
+
+        button:hover {
+          transform: scale(1.1);
+          color: #0d47a1; 
+
+        }
+      }
+    }
+  }
+}
