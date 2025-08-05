@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './assistant-chatbox.component.html',
   styleUrls: ['./assistant-chatbox.component.scss'],
   standalone: true,
-  imports: []
+  imports: [HttpClient]
 })
 export class AssistantChatboxComponent {
   isOpen = false;
